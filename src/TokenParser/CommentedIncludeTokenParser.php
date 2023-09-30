@@ -12,7 +12,8 @@ namespace Djboris88\Twig\TokenParser;
 
 use Djboris88\Twig\Node\CommentedIncludeNode;
 use Twig\TokenParser\IncludeTokenParser;
-use Twig_Token;
+use Twig\Token;
+
 
 /**
  * @author Boris Đemrovski <djboris88@gmail.com>
@@ -24,7 +25,7 @@ class CommentedIncludeTokenParser extends IncludeTokenParser
 	 *
 	 * @return \Djboris88\Twig\Node\CommentedIncludeNode
 	 */
-	public function parse(Twig_Token $token)
+	public function parse(Token $token): CommentedIncludeNode
 	{
 		$expr = $this->parser->getExpressionParser()->parseExpression();
 
