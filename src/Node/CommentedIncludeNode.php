@@ -23,7 +23,7 @@ class CommentedIncludeNode extends IncludeNode implements NodeOutputInterface
 	/**
 	 * @param \Twig_Compiler $compiler
 	 */
-	public function compile(Twig_Compiler $compiler)
+	public function compile(Compiler $compiler): void
 	{
 		$compiler->addDebugInfo($this);
 
