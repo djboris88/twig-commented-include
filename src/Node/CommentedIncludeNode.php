@@ -12,7 +12,7 @@ namespace Djboris88\Twig\Node;
 
 use Twig\Node\IncludeNode;
 use Twig\Node\NodeOutputInterface;
-use Twig_Compiler;
+use Twig\Compiler;
 
 /**
  * @author Boris Đemrovski <djboris88@gmail.com>
@@ -23,7 +23,7 @@ class CommentedIncludeNode extends IncludeNode implements NodeOutputInterface
 	/**
 	 * @param \Twig_Compiler $compiler
 	 */
-	public function compile(Twig_Compiler $compiler)
+	public function compile(Compiler $compiler): void
 	{
 		$compiler->addDebugInfo($this);
 

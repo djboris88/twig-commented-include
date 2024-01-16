@@ -11,12 +11,12 @@
 namespace Djboris88\Twig\Extension;
 
 use Djboris88\Twig\TokenParser\CommentedIncludeTokenParser;
-use Twig_Extension;
+use Twig\Extension\AbstractExtension;
 
 /**
  * @author Boris Đemrovski <djboris88@gmail.com>
  */
-class CommentedIncludeExtension extends Twig_Extension
+class CommentedIncludeExtension extends AbstractExtension
 {
 
 	/**
@@ -27,7 +27,7 @@ class CommentedIncludeExtension extends Twig_Extension
 	}
 
 	/**
-	 * @return array|\Twig_TokenParserInterface[]
+	 * @return array|\CommentedIncludeTokenParser[]
 	 */
 	public function getTokenParsers()
 	{
